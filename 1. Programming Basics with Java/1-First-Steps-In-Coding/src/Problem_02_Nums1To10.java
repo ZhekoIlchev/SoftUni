@@ -1,7 +1,6 @@
-
 public class Problem_02_Nums1To10 {
     public static void main(String[] args) {
-        //Numbers one to ten
+        //Print numbers one to ten
         System.out.println(1);
         System.out.println(2);
         System.out.println(3);
