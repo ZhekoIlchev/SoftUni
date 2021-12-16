@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class Problem_01_DayOfWeek {
+public class Lab_Problem_01_DayOfWeek {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         String[] dayNames = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday",
