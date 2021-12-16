@@ -12,7 +12,7 @@ public class Problem_01_DayOfWeek {
         if (1 <= input && input <= 7) {
             System.out.println(dayNames[input - 1]);
         } else {
-            System.out.println("Invalid day");
+            System.out.println("Invalid day!");
         }
     }
 }
