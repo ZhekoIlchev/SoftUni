@@ -4,11 +4,12 @@ import orm.MyConnector;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, IllegalAccessException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter user: ");
@@ -21,5 +22,10 @@ public class Main {
         Connection connection = MyConnector.getConnection();
 
         EntityManager<User> entityManager = new EntityManager<>(connection);
+
+        User u = new User("Svetoslava", 26, LocalDate.now());
+
+//        entityManager.doCreate(User.class);
+        entityManager.persist(u);
     }
 }

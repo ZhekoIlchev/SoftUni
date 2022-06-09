@@ -23,6 +23,9 @@ public class User {
     @Column(name = "registration_date")
     private LocalDate registration;
 
+    @Column(name = "last_logged_in")
+    private LocalDate lastLoggedIn;
+
     public User(String username, int age, LocalDate registration) {
         this.username = username;
         this.age = age;
@@ -62,12 +65,11 @@ public class User {
         this.registration = registration;
     }
 
-    private Field getIdColumn(Class<?> entity) {
-        
-        return  Arrays.stream(entity.getDeclaredFields())
-                .filter(f -> f.isAnnotationPresent(Id.class))
-                .findFirst()
-                .orElseThrow(() -> new UnsupportedOperationException("Entity does not have primary key"));
+    public LocalDate getLastLoggedIn() {
+        return lastLoggedIn;
+    }
 
+    public void setLastLoggedIn(LocalDate lastLoggedIn) {
+        this.lastLoggedIn = lastLoggedIn;
     }
 }
