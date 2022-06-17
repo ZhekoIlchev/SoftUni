@@ -3,10 +3,7 @@ package entities;
 import annotations.Column;
 import annotations.Entity;
 import annotations.Id;
-
-import java.lang.reflect.Field;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 @Entity(name = "users")
 public class User {
@@ -26,10 +23,15 @@ public class User {
     @Column(name = "last_logged_in")
     private LocalDate lastLoggedIn;
 
+    public User() {
+
+    }
+
     public User(String username, int age, LocalDate registration) {
         this.username = username;
         this.age = age;
         this.registration = registration;
+        this.lastLoggedIn = LocalDate.now();
     }
 
 
@@ -71,5 +73,16 @@ public class User {
 
     public void setLastLoggedIn(LocalDate lastLoggedIn) {
         this.lastLoggedIn = lastLoggedIn;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                ", registration=" + registration +
+                ", lastLoggedIn=" + lastLoggedIn +
+                '}';
     }
 }
