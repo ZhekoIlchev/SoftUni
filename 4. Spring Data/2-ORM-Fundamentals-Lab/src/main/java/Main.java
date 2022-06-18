@@ -25,34 +25,5 @@ public class Main {
 
 //        1. Create table Addresses in Database.
         addressEntityManager.doCreate(Address.class);
-
-//        User u = new User("Svetoslava", 26, LocalDate.now());
-////        u.setId(2);
-//        u.setUsername("Svetoslava_new_finalv2");
-//
-////        userEntityManager.doCreate(User.class);
-////        userEntityManager.doAlter(User.class);
-//        userEntityManager.persist(u);
-//
-////        User first = userEntityManager.findFirst(User.class);
-////        User second = userEntityManager.findFirst(User.class, "id = 3");
-////        System.out.println(first);
-////        System.out.println(second);
-//
-////        Iterable<User> first = userEntityManager.find(User.class, "id < 5");
-////        Iterable<User> users1 = userEntityManager.find(User.class);
-////        System.out.println(users1.toString());
-//
-//        Iterable<User> first = userEntityManager.find(User.class);
-//        System.out.println(first.toString());
-//
-//        User toDelete = userEntityManager.findFirst(User.class, "id = 4");
-//        System.out.println(toDelete);
-//
-//        userEntityManager.delete(toDelete);
-//
-//        Iterable<User> second = userEntityManager.find(User.class);
-//        System.out.println(second.toString());
-
     }
 }
