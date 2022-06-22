@@ -12,8 +12,15 @@ public class Main {
         EntityManager entityManager = emf.createEntityManager();
         entityManager.getTransaction().begin();
 
-        Student student  = new Student("Teo");
-        entityManager.persist(student);
+        Student firstStudent  = new Student("Teo", 23);
+        entityManager.persist(firstStudent);
+
+        Student secondStudent = new Student("Leo", 27);
+        entityManager.persist(secondStudent);
+
+
+        Student findFirst = entityManager.find(Student.class, 1L);
+        entityManager.remove(findFirst);
 
         entityManager.getTransaction().commit();
         entityManager.close();
