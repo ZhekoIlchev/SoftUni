@@ -32,7 +32,7 @@ public class Address {
     }
 
     @ManyToOne
-    @JoinColumn(name = "town_id",referencedColumnName = "town_id")
+    @JoinColumn(name = "town_id", referencedColumnName = "town_id")
     public Town getTown() {
         return town;
     }
@@ -41,7 +41,7 @@ public class Address {
         this.town = town;
     }
 
-    @OneToMany(mappedBy = "address")
+    @OneToMany(mappedBy = "address", cascade = CascadeType.ALL)
     public Set<Employee> getEmployees() {
         return employees;
     }
