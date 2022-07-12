@@ -25,7 +25,8 @@ public class BasicIngredient {
     @ManyToMany(mappedBy = "ingredients", targetEntity = BasicShampoo.class)
     private Set<BasicShampoo> shampoos;
 
-    public BasicIngredient() {}
+    public BasicIngredient() {
+    }
 
     public BasicIngredient(double quantity, String chemicalName) {
         this.quantity = quantity;

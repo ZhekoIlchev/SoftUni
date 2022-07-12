@@ -20,7 +20,8 @@ public class BasicLabel {
     @OneToOne(mappedBy = "label", targetEntity = BasicShampoo.class)
     private BasicShampoo shampoo;
 
-    public BasicLabel() {}
+    public BasicLabel() {
+    }
 
     public BasicLabel(String color) {
         this.color = color;

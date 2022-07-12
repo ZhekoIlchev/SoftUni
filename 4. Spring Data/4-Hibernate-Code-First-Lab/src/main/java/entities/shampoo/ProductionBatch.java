@@ -25,7 +25,8 @@ public class ProductionBatch {
             fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<BasicShampoo> shampoos;
 
-    public ProductionBatch() {}
+    public ProductionBatch() {
+    }
 
     public ProductionBatch(LocalDate createdAt) {
         this.createdAt = createdAt;

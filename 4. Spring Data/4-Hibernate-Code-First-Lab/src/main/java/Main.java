@@ -2,7 +2,6 @@ import entities.shampoo.BasicIngredient;
 import entities.shampoo.BasicLabel;
 import entities.shampoo.BasicShampoo;
 import entities.shampoo.ProductionBatch;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

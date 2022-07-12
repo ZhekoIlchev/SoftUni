@@ -45,11 +45,12 @@ public class BasicShampoo {
      */
     @ManyToMany
     @JoinTable(name = "shampoos_ingredients",
-    joinColumns = @JoinColumn(name = "shampoo_id", referencedColumnName = "id"),
-    inverseJoinColumns = @JoinColumn(name = "ingredient_id", referencedColumnName = "id"))
+            joinColumns = @JoinColumn(name = "shampoo_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id", referencedColumnName = "id"))
     private Set<BasicIngredient> ingredients;
 
-    public BasicShampoo() {}
+    public BasicShampoo() {
+    }
 
     public BasicShampoo(String name, BasicLabel label, ProductionBatch batch) {
         this.name = name;
@@ -94,7 +95,7 @@ public class BasicShampoo {
         return Collections.unmodifiableSet(this.ingredients);
     }
 
-    public void addIngredient(BasicIngredient ingredient){
+    public void addIngredient(BasicIngredient ingredient) {
         this.ingredients.add(ingredient);
     }
 }
