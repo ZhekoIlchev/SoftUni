@@ -1,20 +1,20 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Date;
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "sales")
-public class Sale extends BaseEntity{
+public class Sale extends BaseEntity {
     private Product product;
     private Customer customer;
     private StoreLocation storeLocation;
-    private Date date;
+    private LocalDateTime localDateTime;
 
     public Sale() {
     }
 
+    @ManyToOne
     public Product getProduct() {
         return product;
     }
@@ -23,6 +23,7 @@ public class Sale extends BaseEntity{
         this.product = product;
     }
 
+    @ManyToOne
     public Customer getCustomer() {
         return customer;
     }
@@ -31,6 +32,7 @@ public class Sale extends BaseEntity{
         this.customer = customer;
     }
 
+    @ManyToOne
     public StoreLocation getStoreLocation() {
         return storeLocation;
     }
@@ -39,11 +41,12 @@ public class Sale extends BaseEntity{
         this.storeLocation = storeLocation;
     }
 
-    public Date getDate() {
-        return date;
+    @Column(name = "date_time")
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 }
