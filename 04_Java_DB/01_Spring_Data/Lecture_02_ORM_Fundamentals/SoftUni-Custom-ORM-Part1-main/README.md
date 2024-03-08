@@ -1,1 +1,0 @@
-# SoftUni-Custom-ORM-Part1
