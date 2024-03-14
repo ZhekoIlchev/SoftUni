@@ -1,0 +1,43 @@
+Конфигуриране на Hibernate, чрез hibernate.cfg.xml file.
+
+1. Необходимо е да добавим като dependency:
+    * Hibernate Core;
+        - (https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core/6.3.1.Final);
+    * MySQL Connector Java;
+        - (https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.28).
+
+2. Създаваме клас, който искаме да репрезентираме в базата данни:
+    * Class Student
+
+3. Добавяме конфигурационен файл в ресурсната папка:
+    * File: hibernate.cfg.xml
+
+4. Описваме property-тата на създадения клас (Student) в ресурсната папка:
+    * File: student.hbm.xml
+
+5. Добвяне на ново entity и съзадавне на релация между Students & Cities.
+    * File: city.hbm.xml
+
+Конфигуриране на Hibernate, чрез persistence.xml file.
+
+1. Необходимо е да бъде създадена нов директория в ресурсната папка с име "META-INF".
+
+2. В новосъздадената директория се добавя конфигурационен файл:
+    * File: persistence.xml
+
+3. Използваме анотации за декориране на класовете, които искаме да бъдат репрезентирани в базата като таблици:
+    - @Entity (Декларира класът като ентити или таблица);
+    - @Table(name = "students") / (Декларира имаето на таблицата, начин по който искаме да се казва класа/таблицата в базата);
+    - @Id;
+    - @GeneratedValue(strategy = GenerationType.IDENTITY);
+    - @Column(name = "first_name", length = 50) / име и дължина на колона в таблицата.
+    - @Basic (Указва изрично, че полето няма ограничения)
+    - @Transient (Пропърти на класа, декорирано с тази анотация, няма да бъде репрезентирано като поле в таблицата и базата данни).
+
+Resources:
+    - Презентация
+    - https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
+    - https://www.tutorialspoint.com/hibernate/hibernate_mapping_files.htm
+    - https://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-xml-mapping-example
+    - http://www.java2s.com/Tutorials/Java/JPA/4520__JPA_Query_Function.htm
+    - https://openjpa.apache.org/builds/1.2.3/apache-openjpa/docs/jpa_langref.html#jpa_langref_like
