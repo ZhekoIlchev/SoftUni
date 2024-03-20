@@ -1,0 +1,12 @@
+1. Java Persistence API Inheritance
+    - JPA Inheritance Strategies: Имплементира се чрез javax.persistence.Inheritance анотацията;
+    - Стратегиите за мапване се използват за мапване на entities към базата;
+        * A single table per class hierarchy;
+        * A table per concrete entity class;
+        * "Join" strategy - mapping common fields in a single table.
+
+2. Table Relations
+    - One to One Relationships (Shampoos - Labels);
+    - One to Many and Many to One Relationships (Shampoos - Batches);
+    - Many to Many Relationships (Shampoos - Ingredients);
+    - Self Referencing Relationships (Employee - Employee with field manager);
