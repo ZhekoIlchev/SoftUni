@@ -1,0 +1,3 @@
+Ivan Ivanov 5049.59 01/01/1990 Bulgaria Sofia ul. Ivan Veliki I
+Stoyan Yazov 7090.59 05/05/1982 Bulgaria PLovdiv ul. Stefan Manolov 7
+Svetoslav Tupozakov 9860.43 07/07/1980 Bulgaria Burgas ul. Kaloyan Petkanov 45
