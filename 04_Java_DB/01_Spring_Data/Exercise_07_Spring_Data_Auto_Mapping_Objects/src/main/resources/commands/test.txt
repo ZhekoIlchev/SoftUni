@@ -1,0 +1,9 @@
+RegisterUser|ivanivan.com|Ivan12|Ivan12|Ivan
+RegisterUser|ivan@ivan.com|Ivan1|Ivan12|Ivan
+RegisterUser|ivan@ivan.com|Ivan12|Ivan12|Ivan
+RegisterUser|petko@petko.com|Petko12|Petko12|Petko
+LoginUser|ivan@ivan.com|Ivan
+LoginUser|ivan@ivan.com|Ivan12
+Logout
+Logout
+
