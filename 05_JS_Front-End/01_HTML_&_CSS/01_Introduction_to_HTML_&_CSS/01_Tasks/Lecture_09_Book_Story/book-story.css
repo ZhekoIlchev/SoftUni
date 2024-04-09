@@ -1,0 +1,15 @@
+.style {
+    width: 400px;
+    background: #dddddd;
+    border: 1px solid #000000;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.style p {
+    font-size: 18px;
+}
+
+.style h1 {
+    text-align: center;
+}
