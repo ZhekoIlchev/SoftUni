@@ -1,0 +1,34 @@
+@font-face {
+    font-family: Raleways;
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: GreatVibes;
+    src: url(fonts/GreatVibes-Regular.ttf);
+}
+
+body {
+    font-family: Raleways, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: GreatVibes, cursive;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.list {
+    list-style: square;
+}
+
+.list-second-level {
+    list-style: disc;
+}
+
+.list-third-level {
+    list-style: circle;
+}
