@@ -1,0 +1,42 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header-title {
+    display: inline-block;
+    font-size: 40px;
+    margin-right: 60px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: inline-block;
+}
+
+.list {
+    list-style: none;
+}
+
+.list>li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+li:not(:last-child) {
+    margin-right: 15px;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: black;
+}
+
+main>h1 {
+    font-weight: lighter;
+}
