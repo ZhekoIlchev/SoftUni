@@ -1,0 +1,27 @@
+body {
+    padding: 20px 16px;
+    background-color: lightgray;
+}
+
+body .gallery {
+    width: 90vw;
+}
+
+body .gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 500px;
+    border: 10px solid black;
+    border-radius: 6px;
+    background-color: #FFF;
+}

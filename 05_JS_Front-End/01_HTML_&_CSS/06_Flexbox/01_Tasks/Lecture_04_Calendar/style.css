@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 65vw;
+    display: flex;
+    text-align: center;
+}
+
+.week {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+span {
+    border: 1px solid black;
+    height: 100px;
+}
+
+.title {
+    width: 100%;
+}
+
+.week-days {
+    width: 20%;
+}
+
+.weekends {
+    width: 50%;
+}
+
+.notes {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reminders {
+    height: 50%;
+}
+
+.special-dates {
+    height: 50%;
+}

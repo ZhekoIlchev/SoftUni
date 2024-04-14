@@ -1,0 +1,60 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 15vw;
+    max-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+span {
+    display: flex;
+    width: 120px;
+    height: 60px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.first_letter {
+    order: 1;
+}
+
+.second_letter {
+    order: 2;
+}
+
+.third_letter {
+    order: 3;
+}
+
+.fourth_letter {
+    order: 4;
+}
+
+.fifth_letter {
+    order: 5;
+}
+
+.sixth_letter {
+    order: 6;
+}
+
+.seventh_letter {
+    order: 7;
+}
+
+.eighth_letter {
+    order: 8;
+}
+
+.uppercase_letter {
+    order: 9;
+}
