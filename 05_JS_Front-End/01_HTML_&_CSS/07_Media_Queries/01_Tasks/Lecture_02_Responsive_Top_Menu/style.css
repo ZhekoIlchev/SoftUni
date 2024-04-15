@@ -1,0 +1,95 @@
+body {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "header header header header header header"
+        "aside aside main main main main"
+        "aside aside main main main main"
+        "aside aside main main main main"
+        "aside aside main main main main"
+        "footer footer footer footer footer footer ";
+    gap: 8px;
+}
+
+header {
+    display: flex;
+    grid-area: header;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    margin: 0 30px 0 0;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+header ul li {
+    font-size: 18px;
+}
+
+header ul li:not(:last-child) {
+    margin-right: 36px;
+}
+
+header ul a,
+aside a {
+    text-decoration: none;
+}
+
+aside {
+    grid-area: aside;
+}
+
+aside ul {
+    list-style: none;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header,
+aside,
+main,
+footer {
+    background-color: rgb(181, 216, 255);
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        grid-template-areas:
+            "header header header header header header"
+            "aside aside aside aside aside aside"
+            "main main main main main main"
+            "main main main main main main"
+            "main main main main main main"
+            "footer footer footer footer footer footer ";
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header h2 {
+        align-self: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin-bottom: 20px;
+    }
+}
