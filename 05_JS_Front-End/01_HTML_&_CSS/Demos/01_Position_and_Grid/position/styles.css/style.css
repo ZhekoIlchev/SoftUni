@@ -1,0 +1,128 @@
+body {
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+.container {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid black;
+    margin-bottom: 32px;
+}
+
+.container img {
+    width: 350px;
+}
+
+/* Съществувата 5 стойности за position property 
+        - static;
+        - relative;
+        - absolute;
+        - fixed;
+        - sticky.
+*/
+
+/* STATIC example */
+.static {
+    background-color: lightblue;
+    /* Началната стойност на всеки елемент винаги е static. */
+}
+
+.static img {
+    position: static;
+    /* 
+        Началната стойност на всеки елемент винаги е static, докато не се промени.
+        Не е необходимо да бъде изписана, когато това е желания ефект.
+     */
+    top: 20px;
+    left: 20px
+        /* 
+        В този случай, не може да се променя положението на даден елемент (top & left - не работят).
+      */
+}
+
+/* RELATIVE example */
+.relative {
+    background-color: lightcoral;
+}
+
+.relative img {
+    position: relative;
+    /* 
+        Зазапзва се първоначалното положение на елемента - то си остава там през цялото време. Спрямо това първоначално положение, 
+        местим нашия елемент. Стойностите могат да бъдат както положенителни, така и отрицателни за top, left и др.
+    */
+    top: 50px;
+    left: 50px
+}
+
+/* ABSOLUTE example */
+.absolute {
+    background-color: lightgreen;
+    position: relative;
+    /* 
+        Необходимо е да бъде зададена нова стойност на property-то position, за да може той да служи като отправна точна, спрямо която
+        елементите в него да се позиционират. В случай, че това не е направено, елементите търсят друг "по-голям" parent, спрямо който да го
+        направят - понякога това е самия html таг. 
+    */
+}
+
+.absolute img {
+    width: 100px;
+    position: absolute;
+    /* 
+        С position: absolute се създава нов слой. Тук позиционирането на елемента е спрямо, контейнерът в който се намира.
+        Същественото и много важно е, че на самия контейнер трябва да му бъде сменена стойността, която by default винаги е static на relative,
+        но това може да бъде и някоя от останалите стойности, стига тя да е различна static.
+    */
+    right: 20px;
+    /* 
+        Ако не се зададе left, right, top и тн. елемента остава на първоначалната си почиция, но върхи новосъздадения слой.
+    */
+}
+
+/* FIXED example */
+.fixed {
+    background-color: lightpink;
+}
+
+.fixed img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: fixed;
+    /* 
+        Създава се отново нов слой. Елемента тук се позиционира спрямо нашия браузър и не мърда. Добре е за headers, navigations, pop-up и др.
+    */
+    bottom: 20px;
+    right: 20px
+}
+
+/* STICKY example*/
+.sticky {
+    background-color: lightsalmon;
+    /* 
+    height: 400px;
+    overflow: auto; 
+    */
+    /* 
+        Движението, остава в рамките на контейнера в който се намира. Друго важно, е че елемента се залепя към първия контейнер/parent, който 
+        има overflow, т.е когато имаме scroll.  
+    */
+}
+
+.sticky p {
+    font-size: 32px;
+}
+
+.sticky img {
+    position: sticky;
+    /* 
+        Запазва се като релативен елемент, там където първоначално е заложен да бъде. Същественото тук е, че при скролване, когато елемента
+        достигне до някой от границите на браузъра, зададени чрез top, right, bottom and left той започва да се движи. Това движение обаче,
+        остава в рамките на контейнера в който се намира. Друго важно, е че елемента се залепя към първия контейнер/parent, който 
+        има overflow, т.е когато имаме scroll.
+    */
+    top: 20px;
+}

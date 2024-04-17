@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+
+    /* Чрез  grid-template-columns казваме колко колони искаме да имаме
+        и съответно колко да са широки*/
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Пример колони: grid-template-columns: 200px 1fr 2fr; */
+    /* Пример редове: grid-template-rows: repeat(3, 3fr); */
+
+    /* С gap контролираме разстоянието между елементите по веритакал и хоризонтала. */
+    gap: 16px 32px;
+}

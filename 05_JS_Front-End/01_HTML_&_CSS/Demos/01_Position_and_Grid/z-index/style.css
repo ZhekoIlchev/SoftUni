@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+  padding: 12px;
+}
+
+.container {
+  position: relative;
+  /* z-index: 0; */
+  border: 2px dashed blue;
+  height: 80px;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 6px;
+  border: 2px solid black;
+}
+
+/* 
+    Z-Index-а е подредредбата на нашите layer-и. Колкото по-голям z-index имаме толкова по-напред излиза нашият елемент.
+    Първоначалната му стойност е 0. Когато имаме два елемента с един и същи z-index елементите се подреждат спрямо тяхното дефиниране в
+    нашия html.
+  */
+
+
+.el1 {
+  background-color: lightblue;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+.el2 {
+  background-color: lightcoral;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.el3 {
+  background-color: lightgoldenrodyellow;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 100;
+}
+
+.el4 {
+  background-color: lightgreen;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  z-index: 40;
+}
+
+.el5 {
+  background-color: lightpink;
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  z-index: 30;
+}
+
+.el6 {
+  background-color: lightsalmon;
+  position: absolute;
+  top: 110px;
+  left: 110px;
+  z-index: 100;
+}
+
+.group {
+  position: relative;
+  z-index: 20;
+}
+
+/* 
+  .group {
+    position: relative;
+    z-index: 20;
+
+    Същественото тук е че когато имаме z-index на parent, който държи други елементи в себе си,
+    той се намества спрямо другите елементи, който са на същото ниво, а елементите,който са в него отново се наместват 
+    спрямо големината на своя z-index, която имат но в рамките на своя контейнер.
+  }  
+  */
